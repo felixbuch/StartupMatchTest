@@ -64,7 +64,7 @@ registerForm.addEventListener("submit", async (event) => {
   //console.log(event);
   try {
     //const body = { description };
-    const response = await fetch("http://localhost:3000/api/v1/talents/", {
+    const response = await fetch("https://talentmatchingbackend.onrender.com/api/v1/talents", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
