@@ -1,48 +1,52 @@
 @font-face {
     font-family: Gagalin;
     src: url(./assets/Gagalin-Regular.otf);
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: Caveat;
     src: url(./assets/Caveat-Regular.ttf);
-  }
+}
 
-* { margin: 0; padding: 0; 
+* {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-html{
+
+html {
     font-size: 100%;
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: #38B6FF;
     /*background-image: linear-gradient(to bottom right, rgb(57, 242, 255),  rgb(57, 60, 243));*/
     text-align: center;
 }
 
-.hero{
+.hero {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* CSS für Überschrift und Buttons*/
+/* CSS für Überschrift */
 
-.container{
+.container {
     max-width: 1400px;
     display: flexbox;
 }
 
-.headline{    
+.headline {
     color: white;
     margin-top: auto;
     padding: 10px;
 }
 
-.headline > h1{
+.headline>h1 {
     font-size: 7rem;
     font-family: Gagalin;
     font-weight: 100;
@@ -50,22 +54,24 @@ body{
     text-shadow: 2px 2px rgba(0, 0, 0, 0.863);
 }
 
-.headline > h3{
+.headline>h3 {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-size: 3rem;    
+    font-size: 3rem;
     font-family: Caveat;
     text-shadow: 1px 1px black;
 }
 
-.btn-start{
+/* CSS Für Buttons*/
+
+.btn-start {
     /*display: flex;
     justify-content: center;*/
     margin-bottom: auto;
     /*width: 50%;*/
 }
 
-.btn{
+.btn {
     text-align: center;
     /*padding: 15px;*/
     margin: 15px;
@@ -74,89 +80,96 @@ body{
     background-color: rgba(255, 4, 129, 0.651);
     border: 5px solid rgba(255, 255, 255, 0);
     text-shadow: 1px 1px black;
-    font-size: 40px;    
+    font-size: 40px;
     font-family: Caveat;
 }
 
-.btn:hover{
+.btn:hover {
     border: 5px solid white;
 }
 
-.btn-active{
+.btn-active {
     border: 5px solid white;
 }
 
-.btn-register{
+.btn-register {
     background-color: #FFBC00;
     color: rgb(255, 255, 255);
 }
 
-.btn-search{
+.btn-search {
     background-color: #8c52ff;
     color: white;
 }
 
-.btn-inactive{    
-    background-color:  rgba(149, 144, 156, 0.3) ; 
-    color:  rgba(255, 255, 255, 0.3) ; 
+.btn-inactive {
+    background-color: rgba(149, 144, 156, 0.3);
+    color: rgba(255, 255, 255, 0.3);
     text-shadow: none;
 }
 
-.btn-inactive:hover{
+.btn-inactive:hover {
     border: 5px solid rgba(255, 255, 255, 0);
-    background-color:  rgba(149, 144, 156, 0.6) ; 
+    background-color: rgba(149, 144, 156, 0.6);
 }
 
 
-/*CSS für Hidden Inputs*/
+/*CSS für Hidden Inputs & Checkboxes*/
 
 
-.register-skill{
-    display: none;    
+.register-skill {
+    display: none;
     justify-content: center;
     margin: auto;
     /*width: 50%;*/
     max-width: 900px;
     color: white;
     border-radius: 30px;
-    background: #1ea6f5;}
+    background: #1ea6f5;
+}
 
-#register-skill{
+#register-skill {
     border: #FFBC00 solid 5px;
 }
 
 #search-skill {
     border: #8c52ff solid 5px;
 }
-    
-.register-skill > div{
+
+.register-skill>div {
     /*border: 2px solid white;*/
     width: 45%;
     padding: 30px 20px 0px 20px;
 }
-.register-skill > div > h2{
+
+.register-skill>div>h2 {
     margin-bottom: 20px;
     font-size: 35px;
     color: white;
 }
-.register-skill > div > p{
+
+.register-skill>div>p {
     font-size: 20px;
     text-align: left;
     color: white;
 }
-.register-skill > div > form{
+
+.register-skill>div>form {
     margin-bottom: 20px;
     text-align: left;
 }
-.register-skill > div > form{
+
+.register-skill>div>form {
     margin-bottom: 20px;
     text-align: left;
 }
-.email-input{
+
+.input {
     color: white;
     font-size: large;
 }
-input{
+
+input {
     width: 100%;
     padding: 12px 20px;
     margin: 5px 0px 20px 0px;
@@ -166,25 +179,45 @@ input{
     box-sizing: border-box;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
     display: none;
 }
 
-#checkboxes{
+#checkboxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#checkboxes > div{
-    width:50%;
+label.checkbox-hide_project {
+    font-size: 17px;
+}
+
+label.checkbox-hide {
+    font-size: 17px;
+}
+
+#checkboxes>div {
+    width: 50%;
     margin: 1px 0px 1px 0px;
 }
 
-.checkbox-hide{ 
+#checkboxes_project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#checkboxes_project>div {
+    width: 50%;
+    margin: 1px 0px 1px 0px;
+}
+
+
+.checkbox-hide {
     width: 99%;
     background-color: rgba(255, 255, 255, 0.2);
-    display: inline-block;    
+    display: inline-block;
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -195,104 +228,95 @@ input[type=checkbox]{
     border: 1px solid rgba(255, 255, 255, 0.164);
 }
 
-input[type=checkbox]:checked + .checkbox-hide{
+.checkbox-hide_project {
+    width: 99%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: large;
+    color: white;
+    letter-spacing: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.164);
+}
+
+input[type=checkbox]:checked+.checkbox-hide {
     background-color: rgb(250, 185, 6);
     color: black;
 }
 
-
-input[type=radio]{
-    display: none;
+input[type=checkbox]:checked+.checkbox-hide_project {
+    background-color: #8c52ff;
+    color: black;
 }
-input[type=radio]:checked + .radio-hide{
-    background-color: #8c52ff;
-    color: black;}
 
-.radio-hide{
-        background-color: rgba(255, 255, 255, 0.2);
-        display: inline-block;
-        width: 99%;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        font-weight: 700;
-        font-size: large;
-        color: white;
-        letter-spacing: 2px;
-        border: 1px solid rgba(255, 255, 255, 0.164);
-    }
+#justify-text {
+    text-align: justify;
+}
 
-    fieldset{
-        border: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+textarea {
+    width: 98%;
+    padding: 5px 3px 5px 3px;
+    height: 100px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    color: black;
+    resize: none; /* Mach die Textbox nicht expandable. Für optische Zwecke.*/
+}
 
-    fieldset > div{
-        width:50%;
-        margin: 1px 0px 1px 0px;
-    }
+.textarea {
+    margin-top: 20px;
+}
 
-    textarea{
-        width: 98%;
-        padding:5px 3px 5px 3px;
-        height: 100px;
-        margin-top: 5px;
-        background-color: white;
-        border: 1px solid rgba(255, 255, 255, 0.164);
-        color: black;
-    }
+input[type=submit] {
+    width: 100%;
+    line-height: 20px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: large;
+    color: black;
+}
 
-    .textarea{
-        margin-top: 20px;
-    }
-
-    input[type=submit]{
-        width: 100%;
-        line-height: 20px;
-        margin-top: 10px;
-        background-color: rgb(255, 255, 255);
-        font-weight: 700;
-        font-size: large;
-        color: black;
-    }
-    #register-skill input[type=submit]:hover{
+#register-skill input[type=submit]:hover {
     background-color: #FFBC00;
-    }
-    #search-skill input[type=submit]:hover{
+}
+
+#search-skill input[type=submit]:hover {
     background-color: #8c52ff;
+}
+
+
+/*Responsive Design*/
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 100%;
     }
 
+    .headline>h1 {
+        font-size: 4rem;
+    }
 
-    /*Responsive Design*/
-    @media only screen and (max-width: 800px) {
-        body {
-          font-size: 100%;
-        }
-        .headline > h1{
-            font-size: 4rem;
-        }
-        .headline > h3{
-            font-size: 2rem;
-        }
-        .register-skill{
-            width: 95%;
-            flex-direction: column;
-        }
-        .register-skill > div{
-            /*border: 2px solid white;*/
-            width: 90%;
-            padding: 30px 20px 0px 20px;
-        }
-        #checkboxes > div{
-            width:100%;
-            margin: 2px 0px 2px 0px;
-        }
-        fieldset > div{
-            width:100%;
-            margin: 2px 0px 2px 0px;
-        }
-    
+    .headline>h3 {
+        font-size: 2rem;
+    }
 
-      }
+    .register-skill {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .register-skill>div {
+        /*border: 2px solid white;*/
+        width: 90%;
+        padding: 30px 20px 0px 20px;
+    }
+
+    #checkboxes>div {
+        width: 100%;
+        margin: 2px 0px 2px 0px;
+    }
+}

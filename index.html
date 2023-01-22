@@ -1,203 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Talent-Matching</title>
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-  <body>
-    <div class="hero">
-      <!--Hier ist die Überschrift-->
-      <div class="container">
-        <div class="headline">
-          <h1>Startup - Matching</h1>
-          <h3>Finde einen Partner für dein nächstes Projekt...</h3>
-        </div>
-        <!--Hier ist die Auswahl Registrieren oder suchen-->
 
-        <div class="btn-start">
-          <button class="btn btn-register" id="register">Anmelden</button>
-          <button class="btn btn-search" id="search">Projekt Starten</button>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talent-Matching</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
 
-      <!--Hier ist der Skill registrieren Teil-->
-      <div class="register-skill" id="register-skill">
-        <div>
-          <h2>Skill registrieren</h2>
-          <br />
-          <p>
-            1. Trage Namen und Hochschul-Email ein. <br /><br />
-            2. Wähle deine Skills aus.<br /><br />
-            3. Registrieren <br /><br />Wenn ein anderer Benutzer ein Projekt
-            startet, wirst du per Email informiert. Du kannst bei Interesse dann
-            Kontakt mit dem Projektstarter aufnehmen.
-          </p>
-        </div>
-        <div>
-          <form id="register-skill-form">
-            <div class="email-input">
-              <label>Name:</label>
-              <input type="name" /><br />
-              <label>Hochschul-Email:</label>
-              <input type="email" /><br />
-            </div>
-            <div id="checkboxes">
-              <div>
-                <input name="checkbox1" type="checkbox" value="false" id="r1" />
-                <label class="checkbox-hide" for="r1">Javascript</label>
-              </div>
-              <div>
-                <input name="checkbox2" type="checkbox" value="0" id="r2" />
-                <label class="checkbox-hide" for="r2">Holzarbeit</label>
-              </div>
-              <div>
-                <input name="checkbox3" type="checkbox" value="0" id="r3" />
-                <label class="checkbox-hide" for="r3">Webdesign</label>
-              </div>
-              <div>
-                <input name="checkbox4" type="checkbox" value="0" id="r4" />
-                <label class="checkbox-hide" for="r4">3D Druck</label>
-              </div>
-              <div>
-                <input name="checkbox5" type="checkbox" value="0" id="r5" />
-                <label class="checkbox-hide" for="r5">Textilarbeit</label>
-              </div>
-              <div>
-                <input name="checkbox6" type="checkbox" value="0" id="r6" />
-                <label class="checkbox-hide" for="r6">Software</label>
-              </div>
-              <div>
-                <input name="checkbox7" type="checkbox" value="0" id="r7" />
-                <label class="checkbox-hide" for="r7">Produktdesign</label>
-              </div>
-              <div>
-                <input name="checkbox8" type="checkbox" value="0" id="r8" />
-                <label class="checkbox-hide" for="r8">Goldschmied</label>
-              </div>
-            </div>
-            <input name="submit" type="submit" value="Submit" />
-          </form>
-        </div>
+<body>
+  <div class="hero">
+    <!--Hier ist die Überschrift-->
+    <div class="container">
+      <div class="headline">
+        <h1>Startup - Matching</h1>
+        <h3>Finde Partner für Dein nächstes Projekt!</h3>
       </div>
-      <!--Hier ist der Skill suchen Teil-->
-      <div class="register-skill" id="search-skill" hidden>
-        <div>
-          <h2>Teampartner suchen</h2>
-          <p>
-            1. Trage Namen und Hochschul-Email ein. <br /><br />
-            2. Wähle den gesuchten Skill aus.<br /><br />
-            3. Beschreibe dein Projekt <br /><br /><br />
-            Deine Nachricht wird an alle registrierten Nutzer mit dem gesuchten
-            Skill geschickt. Diese können sich bei Interesse per Email bei dir
-            melden.
-          </p>
-        </div>
-        <div>
-          <form onsubmit="searchSkill()">
-            <div class="email-input">
-              <label>Name:</label>
-              <input type="name" /><br />
-              <label>Hochschul-Email:</label>
-              <input type="email" /><br />
-            </div>
-            <fieldset>
-              <legend>Wähle EINEN gesuchten Skill aus!</legend>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="WebDesign"
-                  value="WebDesign"
-                />
-                <label class="radio-hide" for="WebDesign">WebDesign</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Holzarbeit"
-                  value="Holzarbeit"
-                />
-                <label class="radio-hide" for="Holzarbeit">Holzarbeit</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="3D Druck"
-                  value="3D Druck"
-                />
-                <label class="radio-hide" for="3D Druck">3D Druck</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Textilarbeit"
-                  value="Textilarbeit"
-                />
-                <label class="radio-hide" for="Textilarbeit"
-                  >Textilarbeit</label
-                >
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Software"
-                  value="Software"
-                />
-                <label class="radio-hide" for="Software">Software</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Produktdesign"
-                  value="Produktdesign"
-                />
-                <label class="radio-hide" for="Produktdesign"
-                  >Produktdesign</label
-                >
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Goldschmied"
-                  value="Goldschmied"
-                />
-                <label class="radio-hide" for="Goldschmied">Goldschmied</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="action"
-                  id="Elektrotechnik"
-                  value="Elektrotechnik"
-                />
-                <label class="radio-hide" for="Elektrotechnik"
-                  >Elektrotechnik</label
-                >
-              </div>
-            </fieldset>
-            <div class="textarea">
-              <label>Beschreibe kurz dein Projekt und wen du dafür suchst!</label>
-              <textarea
-                placeholder="Hallo, ich bin... 
-für ein Projekt im Bereich... 
-suche ich jemandem mit folgendem Skill:"
-              ></textarea>
-            </div>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+      <!--Hier ist die Auswahl Registrieren oder suchen-->
+
+      <div class="btn-start">
+        <button class="btn btn-register" id="register">Anmelden</button>
+        <button class="btn btn-search" id="search">Projekt Starten</button>
       </div>
     </div>
-    <div id="app"></div>
-    <script src="src/index.js"></script>
-  </body>
+
+    <!--Hier ist der Skill registrieren Teil-->
+    <div class="register-skill" id="register-skill">
+      <div>
+        <h2>Skills registrieren</h2>
+        <br />
+        <p id="justify-text">
+          1. Trage Namen und Hochschul-Email ein. <br /><br />
+          2. Wähle Deine angebotenen Skills aus.<br /><br />
+          3. Registrieren. <br /><br />
+          Wenn ein anderer Benutzer ein Projekt
+          startet, welches einen Deiner angegebenen Skills enthält, wirst Du 
+          per Email informiert. Ebenfalls erhälst Du eine Übersicht über alle
+          bereits bestehenden Projekte, in denen nach Deinen angegebenen Skills
+          gesucht wird. <br /><br />
+          Interessierst Du Dich für eins der Projekte, kannst Du mit dem Projektinitiator Kontakt aufnehmen.
+        </p>
+      </div>
+      <div>
+        <form id="register-skill-form">
+          <div class="input">
+            <label>Name:</label>
+            <input type="text" name="name" id="name_skill" /><br />
+            <label>Hochschul-Email:</label>
+            <input type="email" name="email" id="email_skill" /><br />
+          </div>
+          <legend>Welche Skills möchtest Du anbieten?</legend>
+          <div id="checkboxes"> <!--Checkboxen werden aus skills.js geladen-->
+          </div>
+          <input name="submit" class="submit" type="submit" value="Registrieren" />
+        </form>
+      </div>
+    </div>
+    <!--Hier ist der Projekt anlegen Teil-->
+    <div class="register-skill" id="search-skill" hidden>
+      <div>
+        <h2>Teampartner suchen</h2>
+        <br />
+        <p id="justify-text">
+          1. Trage Namen und Hochschul-Email ein. <br /><br />
+          2. Wähle die gesuchten Skills aus.<br /><br />
+          3. Vergib einen Projektnamen.<br /><br />
+          4. Beschreibe Dein Projekt. <br /><br />
+          5. Registrieren. <br /><br />
+          Gibt es in dem Skill-Pool einen registrierten Nutzer, der einen Deiner
+          gesuchten Skills besitzt, wird dieser per Mail informiert.<br /><br />
+          Diesem wird eine Email mit Deiner Projektbeschreibung und Email-Adresse
+          zugesendet, woraufhin sich dieser bei Dir melden kann.
+        </p>
+      </div>
+      <div>
+        <form id="register-project-form">
+          <div class="input">
+            <label>Name:</label>
+            <input type="text" name="name" id="name_project" /><br />
+            <label>Hochschul-Email:</label>
+            <input type="email" name="email" id="email_project" /><br />
+          </div>
+          <legend>Welche Skills benötigst Du?</legend>       
+          <div id="checkboxes_project"> <!--Checkboxen werden aus skills.js geladen-->
+          </div>
+          <br />
+          <div class="input">
+            <label>Projektname:</label>
+            <input type="projektname" name="projektname"/>
+            <label>Projektkurzbeschreibung:</label>
+            <textarea id="projektbeschreibung" name="projektbeschreibung" placeholder="Hallo, ich bin... 
+Für ein Projekt im Bereich... 
+suche ich Personen mit Kenntnisse in den Bereichen..."></textarea>
+          </div>
+          <input name ="submit" class="submit" type="submit" value="Registrieren" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <script src="src/index.js"></script>
+  <script src="src/skills.js"></script>
+  <script src="src/formData.js"></script>
+</body>
+
 </html>
