@@ -380,4 +380,7 @@ input[type=submit] {
         width: 100%;
         margin: 2px 0px 2px 0px;
     }
+    label.checkbox-hide {
+        font-size: 13px;
+    }
 }
