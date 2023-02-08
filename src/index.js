@@ -31,3 +31,14 @@ const notifyUser = () => {
   alert("Deine Einträge wurden erfolgreich der Datenbank hinzugefügt.");
   location.reload();
 };
+
+// Faklutaets-Buttons die Unterbuttons anzeigen lassen 
+
+function extendButtons(elementid) {
+  var buttonDetect = document.getElementById(elementid);
+  if (buttonDetect.style.display === "none") {
+    buttonDetect.style.display = "flex";
+  } else {
+    buttonDetect.style.display = "none";
+  }
+}

@@ -32,7 +32,7 @@
         <br />
         <p id="justify-text">
           1. Trage Namen und Hochschul-Email ein. <br /><br />
-          2. Wähle Deine angebotenen Skills aus.<br /><br />
+          2. Wähle aus welche Skills der jeweiligen Fachbereichen Du anbieten möchtest.<br /><br />
           3. Registrieren. <br /><br />
           Wenn ein anderer Benutzer ein Projekt
           startet, welches einen Deiner angegebenen Skills enthält, wirst Du 
@@ -46,13 +46,20 @@
         <form id="register-skill-form">
           <div class="input">
             <label>Name:</label>
-            <input type="text" name="name" id="name_skill" /><br />
+            <input type="text" name="name" id="name_skill" required/><br />
             <label>Hochschul-Email:</label>
-            <input type="email" name="email" id="email_skill" /><br />
+            <input type="email" name="email" id="email_skill" required /><br />
           </div>
           <legend>Welche Skills möchtest Du anbieten?</legend>
-          <div id="checkboxes"> <!--Checkboxen werden aus skills.js geladen-->
+          <div style="line-height:50%;">
+            <br />
           </div>
+          <button type="button" class="zwb zwb-gestaltung" id="gestaltung" onclick="extendButtons('register_gestaltung_checkboxes')">Gestaltung</button>
+          <div id="register_gestaltung_checkboxes" class="checkboxes"></div>
+          <button type="button" class="zwb zwb-wiwi" id="wirtschaft" onclick="extendButtons('register_wirtschaft_checkboxes')">Wirtschaft</button>
+          <div id="register_wirtschaft_checkboxes" class="checkboxes"></div>
+          <button type="button" class="zwb zwb-technik" id="technik" onclick="extendButtons('register_technik_checkboxes')">Technik</button>
+          <div id="register_technik_checkboxes" class="checkboxes"></div>
           <input name="submit" class="submit" type="submit" value="Registrieren" />
         </form>
       </div>
@@ -64,7 +71,7 @@
         <br />
         <p id="justify-text">
           1. Trage Namen und Hochschul-Email ein. <br /><br />
-          2. Wähle die gesuchten Skills aus.<br /><br />
+          2. Wähle aus welche Skills der jeweiligen Fachbereichen Du suchst.<br /><br />
           3. Vergib einen Projektnamen.<br /><br />
           4. Beschreibe Dein Projekt. <br /><br />
           5. Registrieren. <br /><br />
@@ -78,21 +85,28 @@
         <form id="register-project-form">
           <div class="input">
             <label>Name:</label>
-            <input type="text" name="name" id="name_project" /><br />
+            <input type="text" name="name" id="name_project" required/><br />
             <label>Hochschul-Email:</label>
-            <input type="email" name="email" id="email_project" /><br />
+            <input type="email" name="email" id="email_project" required/><br />
           </div>
-          <legend>Welche Skills benötigst Du?</legend>       
-          <div id="checkboxes_project"> <!--Checkboxen werden aus skills.js geladen-->
+          <legend>Welche Skills benötigst Du?</legend>
+          <div style="line-height:50%;">
+            <br />
           </div>
+          <button type="button" class="zwb zwb-gestaltung" id="gestaltung" onclick="extendButtons('project_gestaltung_checkboxes')">Gestaltung</button>
+          <div id="project_gestaltung_checkboxes" class="checkboxes"></div>
+          <button type="button" class="zwb zwb-wiwi" id="wirtschaft" onclick="extendButtons('project_wirtschaft_checkboxes')">Wirtschaft</button>
+          <div id="project_wirtschaft_checkboxes" class="checkboxes"></div>
+          <button type="button" class="zwb zwb-technik" id="technik" onclick="extendButtons('project_technik_checkboxes')">Technik</button>
+          <div id="project_technik_checkboxes" class="checkboxes"></div>
           <br />
           <div class="input">
             <label>Projektname:</label>
-            <input type="projektname" name="projektname"/>
+            <input type="projektname" name="projektname"required/>
             <label>Projektkurzbeschreibung:</label>
             <textarea id="projektbeschreibung" name="projektbeschreibung" placeholder="Hallo, ich bin... 
 Für ein Projekt im Bereich... 
-suche ich Personen mit Kenntnisse in den Bereichen..."></textarea>
+suche ich Personen mit Kenntnisse in den Bereichen..." required ></textarea>
           </div>
           <input name ="submit" class="submit" type="submit" value="Registrieren" />
         </form>
