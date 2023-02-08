@@ -20,7 +20,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: #38B6FF;
+    background-color: #055022;
     /*background-image: linear-gradient(to bottom right, rgb(57, 242, 255),  rgb(57, 60, 243));*/
     text-align: center;
 }
@@ -73,7 +73,6 @@ body {
 
 .btn {
     text-align: center;
-    /*padding: 15px;*/
     margin: 15px;
     border-radius: 30px;
     width: 20rem;
@@ -98,7 +97,7 @@ body {
 }
 
 .btn-search {
-    background-color: #8c52ff;
+    background-color: #c71818;
     color: white;
 }
 
@@ -113,8 +112,57 @@ body {
     background-color: rgba(149, 144, 156, 0.6);
 }
 
+/* CSS für die Zwischenbuttons (Dropdown) */
 
-/*CSS für Hidden Inputs & Checkboxes*/
+.zwb {
+    text-align: center;
+    line-height: 18px;
+    border: 5px solid rgba(255, 255, 255, 0);
+    text-shadow: 1px 1px black;
+    font-size: 36px;
+    font-family: Caveat;
+    width: 100%;
+    height: 50px;
+}
+
+.zwb:hover {
+    border: 5px solid white;
+}
+
+.zwb-active {
+    border: 5px solid white;
+}
+
+.zwb-wiwi {
+    background-color: #298729;
+    color: white;
+    ;
+}
+
+.zwb-gestaltung {
+    background-color: #f25100;
+    color: white;
+}
+
+.zwb-technik {
+    background-color: #0097bd;
+    color: white;
+}
+
+
+.zwb-inactive {
+    background-color: rgba(149, 144, 156, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: none;
+}
+
+.zwb-inactive:hover {
+    border: 5px solid rgba(255, 255, 255, 0);
+    background-color: rgba(149, 144, 156, 0.6);
+}
+
+
+/* CSS für Hidden Inputs & Checkboxes */
 
 
 .register-skill {
@@ -125,7 +173,7 @@ body {
     max-width: 900px;
     color: white;
     border-radius: 30px;
-    background: #1ea6f5;
+    background: #055022;
 }
 
 #register-skill {
@@ -133,7 +181,7 @@ body {
 }
 
 #search-skill {
-    border: #8c52ff solid 5px;
+    border: #c71818 solid 5px;
 }
 
 .register-skill>div {
@@ -183,7 +231,7 @@ input[type=checkbox] {
     display: none;
 }
 
-#checkboxes {
+.checkboxes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -197,22 +245,14 @@ label.checkbox-hide {
     font-size: 17px;
 }
 
-#checkboxes>div {
+legend {
+    font-size: 17px;
+}
+
+.checkboxes>div {
     width: 50%;
     margin: 1px 0px 1px 0px;
 }
-
-#checkboxes_project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#checkboxes_project>div {
-    width: 50%;
-    margin: 1px 0px 1px 0px;
-}
-
 
 .checkbox-hide {
     width: 99%;
@@ -242,13 +282,33 @@ label.checkbox-hide {
     border: 1px solid rgba(255, 255, 255, 0.164);
 }
 
-input[type=checkbox]:checked+.checkbox-hide {
-    background-color: rgb(250, 185, 6);
+#register_gestaltung_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #f25100;
     color: black;
 }
 
-input[type=checkbox]:checked+.checkbox-hide_project {
-    background-color: #8c52ff;
+#register_wirtschaft_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #298729;
+    color: black;
+}
+
+#register_technik_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #0097bd;
+    color: black;
+}
+
+#project_gestaltung_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #f25100;
+    color: black;
+}
+
+#project_wirtschaft_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #298729;
+    color: black;
+}
+
+#project_technik_checkboxes input[type=checkbox]:checked+.checkbox-hide {
+    background-color: #0097bd;
     color: black;
 }
 
@@ -264,7 +324,8 @@ textarea {
     background-color: white;
     border: 1px solid rgba(255, 255, 255, 0.164);
     color: black;
-    resize: none; /* Mach die Textbox nicht expandable. Für optische Zwecke.*/
+    resize: none;
+    /* Mach die Textbox nicht expandable. Für optische Zwecke.*/
 }
 
 .textarea {
@@ -286,7 +347,7 @@ input[type=submit] {
 }
 
 #search-skill input[type=submit]:hover {
-    background-color: #8c52ff;
+    background-color: #c71818;
 }
 
 

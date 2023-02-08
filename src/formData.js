@@ -4,10 +4,15 @@ const skillForm = document.getElementById("register-skill-form");
 
 skillForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(skillForm);
 
-    for (item of formData){
+    if (!formData.has("skills")) {
+        alert("Du musst mindestens einen Skill auswählen!")
+        return
+    }
+
+    for (item of formData) {
         console.log(item[0], item[1]);
     }
     fetch("https://talentmatchingbackend.onrender.com/api/v1/users", {
@@ -16,7 +21,8 @@ skillForm.addEventListener('submit', (e) => {
     })
         .then(res => res.json())
         .then(res => console.log(res))
-        .then(()=> notifyUser());
+        .then(() => notifyUser());
+
 })
 
 
@@ -26,10 +32,15 @@ const projectForm = document.getElementById("register-project-form");
 
 projectForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const formData = new FormData(projectForm);
 
-    for (item of formData){
+    if (!formData.has("skills")) {
+        alert("Du musst mindestens einen Skill auswählen!")
+        return
+    }
+
+    for (item of formData) {
         console.log(item[0], item[1]);
     }
     fetch("https://talentmatchingbackend.onrender.com/api/v1/projects", {
@@ -38,5 +49,6 @@ projectForm.addEventListener('submit', (e) => {
     })
         .then(res => res.json())
         .then(res => console.log(res))
-        .then(()=> notifyUser());        
+        .then(() => notifyUser());
+
 })
