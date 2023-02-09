@@ -1,4 +1,4 @@
-//in dieser datei könnten reguläre ausdrücke für name und irgendwann gegebenfalls passwörter ergänzt werden
+//in dieser datei könnten gegebenfalls reguläre ausdrücke für passwörter ergänzt werden
 const inputs = document.querySelectorAll('input');
 
 // regex patterns
