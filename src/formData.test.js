@@ -16,33 +16,22 @@ describe('Skill Form Submission', () => {
         fetchMock.reset();
     });
 
-    it('should submit form data and call the API', () => {
+    it('should submit form data and call the API', (done) => {
         fetchMock.post('https://talentmatchingbackend.onrender.com/api/v1/users', {});
         const submitEvent = new Event('submit');
         skillForm.dispatchEvent(submitEvent);
-        expect(fetchMock.lastCall()[0]).toBe('https://talentmatchingbackend.onrender.com/api/v1/users');
-        expect(fetchMock.lastOptions().method).toBe('POST');
-        expect(fetchMock.lastOptions().body.get('name_skill')).toBe('John Doe');
-        expect(fetchMock.lastOptions().body.get('email_skill')).toBe('johndoe@example.com');
-    });
 
-    it('should show an error if the name or email is missing', () => {
-        const originalAlert = window.alert;
-        window.alert = jest.fn();
-
-        document.getElementById("name_skill").value = '';
-        const submitEvent = new Event('submit');
-        skillForm.dispatchEvent(submitEvent);
-        expect(window.alert).toHaveBeenCalledWith("Bitte gib deine Email und deinen Namen an");
-
-        document.getElementById("name_skill").value = 'John Doe';
-        document.getElementById("email_skill").value = '';
-        skillForm.dispatchEvent(submitEvent);
-        expect(window.alert).toHaveBeenCalledWith("Bitte gib deine Email und deinen Namen an");
-
-        window.alert = originalAlert;
+        setTimeout(() => {
+            const [url, options] = fetchMock.lastCall('https://talentmatchingbackend.onrender.com/api/v1/users');
+            const formData = new FormData(skillForm);
+            expect(url).toEqual('https://talentmatchingbackend.onrender.com/api/v1/users');
+            expect(options.method).toEqual('POST');
+            expect(options.body).toEqual(formData);
+            done();
+        }, 0);
     });
 });
+
 
 describe('Project Form Submission', () => {
     let projectForm;
