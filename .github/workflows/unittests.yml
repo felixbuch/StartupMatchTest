@@ -1,31 +1,30 @@
-name : Unit-Testing
+name: Unit-Testing
 
 on:
   push:
-    branches: [friedrich]
+    branches: [ friedrich ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
-  job:
-    test:
-      runs-on: ubuntu-latest
+job:
+  test:
+    runs-on: ubuntu-latest
 
-      strategy:
-        matrix:
-          node-version: [18.x]
+  strategy:
+    matrix:
+      node-version: [ 18.x ]
 
-      steps:
-        - uses: actions/checkout@v2
+  steps:
+    - uses: actions/checkout@v2
 
-        - name: Node Install
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{matrix.node-version}}
+    - name: Node Install
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{matrix.node-version}}
+    - run: npm i
 
-        - run: npm i
-
-        - name: Run Jest Unit-Testing
-          uses: actions/setup-node@v1
-          with:
-            node-version: ${{matrix.node-version}}
-        - run: npm run test:ci
+    - name: Run Jest Unit-Testing
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{matrix.node-version}}
+    - run: npm run test:ci
